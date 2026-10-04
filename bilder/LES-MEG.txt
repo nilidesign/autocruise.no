@@ -1,0 +1,18 @@
+BILDEMAPPE – AutoCruise
+
+web/header/   Bildene i slideshowet øverst på forsiden.
+              Rekkefølgen følger filnavnet – sett 1, 2, 3 … foran navnet.
+web/          Bildene på galleri-siden (rekkefølge etter filnavn).
+web/liten/    LAGES AUTOMATISK – små forhåndsvisninger. Ikke rediger her.
+bilder.js     LAGES AUTOMATISK – listen over bildene.
+
+Slik legger du til eller fjerner bilder:
+1. Legg bildet i web/header/ eller web/ (eller slett det derfra).
+   Bruk gjerne liggende bilder, ca. 1920 px brede og under 1 MB.
+   Unngå mellomrom og æøå i filnavn.
+2. Kjør i Terminal fra prosjektmappen:   bash bilder/oppdater.sh
+3. Commit og push til GitHub.
+
+NB: Bildene i Om oss, det store scrollbildet, «Se våre biler»-banneret og
+Instagram-delen er valgt direkte i index.html. Sletter du ett av dem fra web/,
+må stien i index.html også endres.

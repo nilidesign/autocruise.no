@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galleri | AutoCruise – Premium bruktbiler | Lørenskog</title>
+  <meta name="description" content="Bilder fra AutoCruise – eksklusive bruktbiler fra Mercedes-Benz i Lørenskog.">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="icon" href="img/logo_icon.png">
+  <link rel="canonical" href="https://www.autocruise.no/galleri.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Galleri – AutoCruise">
+  <meta property="og:description" content="Bilder fra AutoCruise i Lørenskog.">
+  <meta property="og:image" content="https://www.autocruise.no/bilder/web/IMG_0812.jpg">
+  <meta property="og:locale" content="nb_NO">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=14">
+</head>
+<body class="page-gallery">
+
+<header class="nav" id="nav">
+  <a href="index.html" class="nav__logo" aria-label="AutoCruise – til forsiden">
+    <img src="img/logo_white.png" alt="AutoCruise" width="150" height="26">
+  </a>
+  <nav class="nav__links" id="menu" aria-label="Hovedmeny">
+    <a href="index.html#om-oss">Om oss</a>
+    <a href="index.html#tjenester">Tjenester</a>
+    <a href="galleri.html" class="is-active" aria-current="page">Galleri</a>
+    <a href="index.html#innbytte">Innbytte</a>
+    <a href="index.html#kontakt">Kontakt</a>
+    <a href="biler.html" class="nav__cars">Våre biler</a>
+  </nav>
+  <button class="nav__burger" id="burger" aria-label="Åpne meny" aria-expanded="false" aria-controls="menu">
+    <span></span><span></span>
+  </button>
+</header>
+
+<main>
+  <section class="gal-head">
+    <div class="wrap gal-head__inner">
+      <h1>Galleri</h1>
+      <div class="gal-head__side">
+        <p class="lead">Et utvalg bilder fra AutoCruise.</p>
+        <p><span id="galCount">0</span> bilder · Flere på <a class="u" href="https://www.instagram.com/autocruise.no/" target="_blank" rel="noopener">Instagram</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="gal">
+    <div class="wrap">
+      <div class="gal__grid" id="galGrid"></div>
+    </div>
+  </section>
+
+  <section class="cta section">
+    <div class="wrap cta__inner">
+      <h2 class="reveal">Se bilene vi har til salgs nå</h2>
+      <p class="lead reveal">Håndplukket utvalg – visning i Lørenskog etter avtale.</p>
+      <div class="cta__actions reveal">
+        <a class="btn" href="biler.html">Våre biler</a>
+        <a class="link" href="mailto:post@autocruise.no?subject=Kontakt%20(via%20www.autocruise.no)">Send e-post</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Bildevisning" hidden>
+  <button class="lightbox__close" id="lbClose" aria-label="Lukk"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Forrige"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+  <figure>
+    <img id="lbImg" alt="">
+    <figcaption id="lbCap"></figcaption>
+  </figure>
+  <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Neste"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <img src="img/logo_white.png" alt="AutoCruise" class="footer__logo" loading="lazy">
+    <nav aria-label="Bunnmeny">
+      <a href="index.html">Forside</a>
+      <a href="biler.html">Våre biler</a>
+      <a href="index.html#tjenester">Tjenester</a>
+      <a href="index.html#innbytte">Innbytte</a>
+      <a href="index.html#kontakt">Kontakt</a>
+      <a href="https://www.instagram.com/autocruise.no/" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+  </div>
+  <div class="wrap footer__bottom">
+    <span>© <span id="year">2026</span> AutoCruise AS, Orgnr. 827 988 812</span>
+    <span>Webløsning levert av <a href="https://nilidesign.com" target="_blank" rel="noopener">NiliDesign</a></span>
+  </div>
+</footer>
+
+<div class="quickbar">
+  <a href="tel:+4798442888">Ring oss</a>
+  <a href="biler.html">Våre biler</a>
+</div>
+
+<script src="bilder/bilder.js?v=14"></script>
+<script src="js/main.js?v=14"></script>
+</body>
+</html>
