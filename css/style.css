@@ -287,6 +287,10 @@ p { color: var(--muted); margin: 0 0 16px; }
 .page-cars .cars { padding-top: clamp(50px, 6vw, 80px); }
 .cars__frame { background: #fff; }
 .cars__frame iframe { display: block; width: 100%; height: 900px; border: 0; }
+.cars-about { border-top: 1px solid var(--line); }
+.cars-about__grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 24px clamp(40px, 6vw, 90px); align-items: start; }
+.cars-about h2 { margin: 0; max-width: 16ch; }
+.cars-about__text p:last-child { margin-bottom: 0; }
 .cars-perks { border-block: 1px solid var(--line); }
 .cars-perks__grid { display: grid; grid-template-columns: repeat(3, 1fr); }
 .cars-perks__grid > div { padding: 48px 40px 48px 0; }
@@ -296,6 +300,12 @@ p { color: var(--muted); margin: 0 0 16px; }
 .cta__inner { text-align: center; display: flex; flex-direction: column; align-items: center; }
 .cta__inner h2 { font-size: clamp(40px, 6vw, 84px); margin-bottom: 14px; }
 .cta__actions { display: flex; align-items: center; gap: 30px; flex-wrap: wrap; justify-content: center; margin-top: 14px; }
+
+/* ============ 404 ============ */
+.notfound { min-height: 78vh; display: flex; align-items: center; padding: 140px 0 80px; }
+.notfound__code { font: 700 clamp(110px, 20vw, 260px)/.8 var(--head); letter-spacing: -.04em; color: transparent; -webkit-text-stroke: 1px var(--dim); margin: 0 0 24px; }
+.notfound h1 { font-size: clamp(36px, 5vw, 64px); line-height: 1.05; margin: 0 0 14px; }
+.notfound__actions { justify-content: flex-start; margin-top: 28px; }
 
 /* ============ FOOTER ============ */
 .footer { border-top: 1px solid var(--line); padding-top: 48px; }
@@ -348,6 +358,7 @@ p { color: var(--muted); margin: 0 0 16px; }
   .hero__caption { display: none; }
   .partners__grid li { flex-basis: calc(50% - 1px); height: 140px; }
   .cars-perks__grid { grid-template-columns: 1fr; }
+  .cars-about__grid { grid-template-columns: 1fr; }
   .cars-perks__grid > div, .cars-perks__grid > div + div { padding: 32px 0; border-left: 0; }
   .cars-perks__grid > div + div { border-top: 1px solid var(--line); }
   .expand { height: 200vh; }

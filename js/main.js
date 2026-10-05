@@ -13,6 +13,7 @@
   const enc = encodeURIComponent;
   const headerSrc = (fil) => "bilder/web/header/" + enc(fil);
   const galSrc = (fil) => "bilder/web/" + enc(fil);
+  const altOf = (fil) => (window.BILDETEKSTER || {})[fil] || "Bil fra AutoCruise i Lørenskog";
   function setThumb(img, fil) {
     img.onerror = () => { img.onerror = null; img.src = galSrc(fil); };
     img.src = "bilder/web/liten/" + enc(fil);
@@ -60,7 +61,7 @@
       const el = document.createElement("div");
       el.className = "hero__slide";
       const img = document.createElement("img");
-      img.alt = "";
+      img.alt = altOf(s);
       if (i > 0) img.loading = "lazy";
       img.src = headerSrc(s);
       el.appendChild(img);
@@ -150,9 +151,9 @@
     const items = gallery.map((fil, i) => {
       const b = document.createElement("button");
       b.className = "gal__item reveal";
-      b.setAttribute("aria-label", "Åpne bilde " + (i + 1) + " av " + n);
+      b.setAttribute("aria-label", "Åpne bilde: " + altOf(fil));
       const img = document.createElement("img");
-      img.alt = "";
+      img.alt = altOf(fil);
       img.loading = i < 8 ? "eager" : "lazy";
       img.className = "is-loading";
       img.addEventListener("load", () => img.classList.remove("is-loading"));
@@ -297,8 +298,8 @@
     const img = $("#lbImg");
     img.style.animation = "none"; void img.offsetWidth; img.style.animation = "";
     img.src = galSrc(g);
-    img.alt = "";
-    $("#lbCap").textContent = (lbIndex + 1) + " / " + gallery.length;
+    img.alt = altOf(g);
+    $("#lbCap").textContent = ((window.BILDETEKSTER || {})[g] ? altOf(g) + " — " : "") + (lbIndex + 1) + " / " + gallery.length;
   }
   function openLb(i) {
     lastFocus = document.activeElement;

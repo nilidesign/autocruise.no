@@ -16,12 +16,16 @@ bilder/web/           Bilder til galleriet
 bilder/web/liten/     Små forhåndsvisninger (lages automatisk)
 bilder/bilder.js      Bildelister (lages automatisk)
 bilder/oppdater.sh    Oppdaterer listene og forhåndsvisningene
+bilder/bildetekster.js  Beskrivelse (alt-tekst) for hvert bilde – rediger for hånd
+html/                 Videresending fra gamle adresser (/html/biler.html, /html/kontakt.html)
+sitemap.xml, robots.txt, 404.html   SEO og feilside
 ```
 
 ## Legge til bilder
 
 1. Legg bildet i `bilder/web/header/` (slideshow) eller `bilder/web/` (galleri).
 2. Kjør `bash bilder/oppdater.sh`.
+   Legg gjerne til en kort beskrivelse av bildet i `bilder/bildetekster.js` (bra for Google).
 3. Commit og push – siden oppdateres automatisk.
 
 Etter endringer i CSS/JS: øk `?v=`-tallet i `index.html`, `biler.html` og `galleri.html` så besøkende får ny versjon.
