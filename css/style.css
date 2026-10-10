@@ -153,6 +153,11 @@ p { color: var(--muted); margin: 0 0 16px; }
 .expand__frame::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,var(--shade, 0)); }
 .expand__text { position: relative; z-index: 2; text-align: center; padding: 0 var(--gutter); opacity: 0; transform: translateY(30px); transition: opacity .6s, transform .8s var(--ease); }
 .expand__text.is-in { opacity: 1; transform: none; }
+.expand__hint { position: absolute; left: 50%; bottom: clamp(24px, 5vh, 48px); z-index: 3; display: flex; flex-direction: column; align-items: center; gap: 12px; translate: -50% 0; font: 500 13px/1 "Barlow", sans-serif; letter-spacing: .14em; text-transform: uppercase; color: #fff; text-shadow: 0 1px 10px rgba(0,0,0,.6); transition: opacity .4s, transform .5s var(--ease); pointer-events: none; }
+.expand__hint.is-gone { opacity: 0; transform: translateY(14px); }
+.expand__mouse { width: 26px; height: 42px; border: 1.5px solid rgba(255,255,255,.85); border-radius: 14px; position: relative; box-shadow: 0 0 20px rgba(0,0,0,.35); }
+.expand__mouse i { position: absolute; left: 50%; top: 8px; width: 3px; height: 8px; margin-left: -1.5px; border-radius: 2px; background: #fff; animation: wheel 1.8s var(--ease) infinite; }
+@keyframes wheel { 0% { opacity: 0; transform: translateY(0); } 25% { opacity: 1; } 100% { opacity: 0; transform: translateY(14px); } }
 .expand__text h2 { font-size: clamp(34px, 5vw, 72px); margin: 0; text-shadow: 0 2px 30px rgba(0,0,0,.4); }
 
 /* ============ TJENESTER ============ */
@@ -383,6 +388,7 @@ p { color: var(--muted); margin: 0 0 16px; }
   .partners__grid img.p-small { height: 26px; }
   .lightbox__nav { top: auto; bottom: 16px; margin: 0; }
   .banner { height: 60vh; }
+  .expand__hint { bottom: 80px; }
   .quickbar {
     display: grid; grid-template-columns: 1fr 1fr; position: fixed; left: 0; right: 0; bottom: 0; z-index: 90;
     background: var(--bg); border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom);
@@ -398,4 +404,5 @@ p { color: var(--muted); margin: 0 0 16px; }
   .expand__frame { clip-path: none !important; }
   .expand__frame img { transform: none !important; }
   .expand__text { opacity: 1; transform: none; }
+  .expand__hint { display: none; }
 }

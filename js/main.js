@@ -209,6 +209,7 @@
   const expandFrame = $("#expandFrame");
   const expandImg = $("#expandImg");
   const expandText = $("#expandText");
+  const expandHint = $("#expandHint");
   const parallax = $$(".parallax");
   let ticking = false;
 
@@ -246,6 +247,7 @@
       expandImg.style.transform = "scale(" + (1.35 - 0.3 * e) + ")";
       expandFrame.style.setProperty("--shade", (0.35 * clamp((p - 0.55) / 0.3)).toFixed(3));
       expandText.classList.toggle("is-in", p > 0.62);
+      expandHint.classList.toggle("is-gone", p > 0.06);
     }
 
     parallax.forEach((img) => {
